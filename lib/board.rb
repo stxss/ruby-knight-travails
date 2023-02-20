@@ -7,9 +7,12 @@ class Board
 
     def create_board
         arr = Array.new(8) {Array.new(8)}
+        # idx = 0
         8.times do |row|
             8.times do |column|
                 arr[row][column] = [row, column]
+                # arr[row][column] = [row, column, idx]
+                # idx += 1
             end
         end
         arr
