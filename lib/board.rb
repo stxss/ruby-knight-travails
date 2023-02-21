@@ -1,21 +1,16 @@
 class Board
-    attr_accessor :board
-    def initialize
-        @board = create_board
-        # @board = Array.new(8, Array.new(8, (0..2).to_a))
-    end
+  attr_accessor :board
+  def initialize
+    @board = create_board
+  end
 
-    def create_board
-        arr = Array.new(8) {Array.new(8)}
-        # idx = 0
-        8.times do |row|
-            8.times do |column|
-                arr[row][column] = [row, column]
-                # arr[row][column] = [row, column, idx]
-                # idx += 1
-            end
-        end
-        arr
+  def create_board
+    arr = Array.new(8) { Array.new(8) }
+    8.times do |row|
+      8.times do |column|
+        arr[row][column] = [row, column]
+      end
     end
+    arr
+  end
 end
-
