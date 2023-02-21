@@ -3,6 +3,11 @@ require_relative "board"
 class Knight
   attr_accessor :board, :moves, :starting_pos, :ending_pos
 
+  MINIMUM_JUMPS_TO_VICINITY = 3
+  MIN_JUMP_SIZE = 6
+  MAX_JUMP_SIZE = 17
+  MIN_TO_PREVENT_OVERLAP = 3
+
   def initialize(board, starting_pos, ending_pos)
     @board = board
     @starting_pos = starting_pos
