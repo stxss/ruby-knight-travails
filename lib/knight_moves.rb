@@ -52,10 +52,10 @@ class Knight
         proximity.uniq!
       end
 
-      max_acceptable = if visited.length < 4
-        proximity.select { |num| num > 3 }.min
+      max_acceptable = if visited.length <= MINIMUM_JUMPS_TO_VICINITY
+        proximity.select { |distance| distance > MIN_TO_PREVENT_OVERLAP }.min
       else
-        proximity.select { |num| num <= 17 && num > 6 || num == 2 }.max
+        proximity.select { |distance| distance <= MAX_JUMP_SIZE && distance > MIN_JUMP_SIZE || distance == 2 }.max
       end
 
       child = proximity_hash.key(max_acceptable)
