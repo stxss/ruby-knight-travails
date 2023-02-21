@@ -15,12 +15,10 @@ class Knight
     @moves = possible_moves(@board, @ending_pos, @starting_pos)
   end
 
-  def possible_moves(board, ending_pos, node = starting_pos, visited = [], queue = [], res = [])
+  def possible_moves(board, ending_pos, node = starting_pos, visited = [], queue = [])
     return if node.nil?
 
     current = node
-
-    res << current
     visited << current
 
     # To get all the possible children and not going out of the board bounds
@@ -63,7 +61,7 @@ class Knight
       child = proximity_hash.key(max_acceptable)
       proximity.clear
       queue.clear
-      possible_moves(board, ending_pos, child, visited, queue, res) until queue.any?(ending_pos)
+      possible_moves(board, ending_pos, child, visited, queue) until queue.any?(ending_pos)
     end
     visited
   end
