@@ -16,7 +16,7 @@ In the above code, I specify 3 constants.
 -   The first constant is used to represent the least number of jumps a knight has to make to enter the 'vicinity' of the target position. As demonstrated in the picture below, the vicinity ranges from c6 up to e2. Basically the inside of the black dots denote the vicinity of the knight piece.
 <br>
 
-    ![knight_possibilities](board_with_knight.png)
+    ![knight_possibilities](ruby-knight-travails/board_with_knight.png)
 
 -   Then, the minimum jump size (counting from left to right) for a piece is of 6 squares and the maximum is 17 in either direction. If we take the above example, the shortest jump is from `[4, 3]` to `[5, 1]/[3, 5]` and the longest is from `[4, 3]` to `[2, 2]/[6, 4]`.
 -   Finally, a variable used to represent the minimum distance that has to be between an edge square and a possible jump
