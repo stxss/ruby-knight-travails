@@ -1,5 +1,6 @@
-# Knight Travails
+# TOP - Knight Travails - @stxss
 
+This is the Knight Travails Project from [The Odin Project](https://www.theodinproject.com/lessons/ruby-knights-travails)
 
 ## I chose not to create a binary tree. Instead, I opted to navigate the board's indexes.
 
